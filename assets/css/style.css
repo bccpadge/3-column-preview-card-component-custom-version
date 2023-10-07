@@ -1,0 +1,229 @@
+/* css variables */
+:root {
+  --clr-bkg: 0 0% 95%;
+  --clr-gray: 0 0% 20%;
+  --clr-black: 0 0% 0%;
+
+  /* typography */
+  --ff-big-shoulders-display: "Big Shoulders Display", cursive;
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+}
+/* reset */
+/* Box sizing rules */
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove defaut margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* Remove list styles on ul, ol elements* with class */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* sometimes referred to as .sr-only */
+.visually-hidden:not(:focus):not(:active):not(:focus-within) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+*:focus-visible {
+  outline: 0.1875rem dotted dodgerblue;
+  outline-offset: 0.3125rem;
+}
+
+/* general styles */
+body {
+  font-size: 0.9375rem;
+  background-color: hsl(var(--clr-bkg));
+  place-content: center;
+  font-family: var(--ff-lexend-deca);
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* utility class */
+.grid {
+  display: grid;
+}
+
+.card__container {
+  margin-inline: auto;
+  margin-block: 3rem;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 425px;
+  border-radius: 1.25rem;
+  border-top-left-radius: 4.375rem;
+  background-color: var(--clr);
+  overflow: hidden;
+}
+
+.card__inner {
+  position: absolute;
+  inset: 0.625rem;
+  background-color: hsl(var(--clr-bkg));
+  border-radius: 0.625rem;
+}
+
+.image__box {
+  position: absolute;
+  width: 8.75rem;
+  height: 8.75rem;
+  background-color: var(--clr);
+  border-bottom-right-radius: 50%;
+  transition: 350ms;
+}
+
+.image__box::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -1.875rem 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: transparent;
+  border-top-left-radius: 1.875rem;
+  box-shadow: -5px -5px 0 5px var(--clr);
+}
+
+.image__box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: transparent;
+  border-top-left-radius: 1.875rem;
+  box-shadow: -5px -5px 0 5px var(--clr);
+}
+
+.icon {
+  position: absolute;
+  inset: 0.625rem;
+  background-color: hsl(var(--clr-bkg));
+  border-radius: 50%;
+  border-top-right-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  display: grid;
+  place-content: center;
+}
+
+.card__text-group {
+  position: absolute;
+  inset: 9.375rem auto auto auto;
+  padding: 0.9375rem;
+  gap: 1rem;
+}
+
+.card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(var(--clr-gray));
+  font-family: var(--ff-big-shoulders-display);
+}
+
+.button {
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: hsl(var(--clr-black));
+  width: max-content;
+  padding: 0.5em 2em;
+  border-radius: 1.875rem;
+  border: 2px solid var(--clr);
+  transition: 350ms ease-in-out;
+}
+
+.button:is(:hover, :focus-visible) {
+  color: hsl(var(--clr-gray));
+  background-color: var(--clr);
+  box-shadow: 5px 5px 25px 1px var(--clr);
+}
+
+/* attribution */
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  display: none;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 50em) {
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+    margin-block: 0;
+  }
+}

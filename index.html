@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Frontend Mentor challenge">
+  <meta name="keywords" content="HTML, CSS">
+  <meta name="author" content="Rebecca Padgett">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | 3-column preview card component</title>
+  <!-- !google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+  <!-- !css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="grid">
+  <main class="card__container grid">
+    <h1 class="visually-hidden">3-column preview card component</h1>
+    <div class="card sedans" style="--clr:hsl(198, 58%, 72%)">
+      <article class="card__inner">
+        <div class="image__box">
+          <div class="icon">
+            <img src="./assets/images/icon-sedans.svg" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <div class="card__text-group grid">
+          <h2 class="card__title">Sedans</h2>
+          <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+            or on your next road trip.</p>
+          <a href="#" class="button" aria-label="learn more about sedan cars">learn more</a>
+        </div>
+      </article>
+    </div>
+    <div class="card suvs" style="--clr:hsl(270, 25%, 75%)">
+      <article class="card__inner">
+        <div class="image__box">
+          <div class="icon">
+            <img src="./assets/images/icon-suvs.svg" alt="" aria-hidden="true">
+          </div>
+        </div>
+        <div class="card__text-group grid">
+          <h2 class="card__title">Suvs</h2>
+          <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+            and off-road adventures.</p>
+          <a href="#" class="button" aria-label="learn more about suv cars ">learn more</a>
+        </div>
+      </article>
+    </div>
+    <div class="card luxury" style="--clr:hsl(336, 64%, 77%)"">
+      <article class=" card__inner">
+      <div class="image__box">
+        <div class="icon">
+          <img src="./assets/images/icon-luxury.svg" alt="" aria-hidden="true">
+        </div>
+      </div>
+      <div class="card__text-group grid">
+        <h2 class="card__title">Luxury</h2>
+        <p> Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+          rental and arrive in style.</p>
+        <a href="#" class="button" aria-label="learn more about luxury cars">learn more</a>
+      </div>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Rebecca Padgett</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
