@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Original URL: [Github Pages](https://bccpadge.github.io/3-column-preview-card-component/)
-- Custom version URL: [Github Pages]()
+- Custom version URL: [Github Pages](https://bccpadge.github.io/3-column-preview-card-component-custom-version/)
 
 ## My process
 
